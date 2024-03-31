@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID-19 Effects on University Attendance</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+      defer
+    ></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <button onclick="onHeaderBtnClicked(this)">Preface</button>
+      <button onclick="onHeaderBtnClicked(this)">Map</button>
+      <button onclick="onHeaderBtnClicked(this)">Comparison</button>
+      <button onclick="onHeaderBtnClicked(this)">Visualisation</button>
+      <button onclick="onHeaderBtnClicked(this)">Reference</button>
+    </header>
+
+    <main>
+      <section id="introSection">
+        <h1>COVID-19 EFFECTS ON</h1>
+        <h1>UNIVERSITY ATTENDANCE</h1>
+      </section>
+
+      <section>
+        <h1>
+          This website would like to share with you the effects of the COVID-19
+          pandemic on attendance in UK universities. It highlights a comparison
+          and insights associated with the pandemic and university attendance
+          before, during, and after the pandemic (between 2020 and 2024). A
+          comparative perspective will also account for patterns in Pakistan.
+        </h1>
+      </section>
+
+      <section id="timelineSection">
+        <h1>
+          The COVID-19 pandemic adversely affected various parts of learning
+          activities in schools globally. The notable aspect is the effects on a
+          typical study program. Following UK government interventions to
+          contain the virus spread by reducing contact and closeness in public
+          spaces, schools embraced virtual learning via different digital
+          platforms. The method proved effective despite accompanying issues
+          such as disparities in access to learning resources in regions with
+          limited supportive educational resources. A US-based study revealed a
+          statistically significant negative relationship between the pandemic
+          and college enrolment for all universities in Texas (Korotchenko and
+          Dobbs, 2023, p. 1). However, other empirical evidence shows that a
+          shift from campus-based lectures to digital ones because of pandemic
+          guidelines showed a significantly higher attendance rate, thus
+          suggesting the effectiveness of online learning (Haugom, 2022, p. 1)
+        </h1>
+      </section>
+
+      <section id="prefaceHeader">
+        <h1 class="topic">Education and COVID 19</h1>
+      </section>
+
+      <section id="prefaceSection">
+        <div class="whiteBubble">
+          <ul>
+            <h1>Education and Covid-19</h1>
+            <li>A new approach: remote working and hybrid learning</li>
+            <li>UniverA new approach; remote working and hybrid learning</li>
+            <li>University holding ‘pop up’ clinics for the vaccine</li>
+            <li>
+              International students are being pushed to register with their
+              local GP.
+            </li>
+            <li>
+              ravel requirements for international students are more difficult.
+            </li>
+            <li>Red List countries</li>
+            <li>Quarantine</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="mapHeader">
+        <h1 class="topic">Map</h1>
+      </section>
+
+      <section id="mapSection">
+        <div id="map"></div>
+      </section>
+
+      <section id="ukTimelineHeader">
+        <h1 class="topic">Timeline of University Attendance in the UK</h1>
+      </section>
+
+      <section id="ukTimelineSection">
+        <ul class="list_1">
+          <h1>Before COVID-19 (pre-2020):</h1>
+          <li>
+            Standard academic calendar with in-person lectures, seminars, and
+            exams.
+          </li>
+          <li>
+            Traditional application process with UCAS (Universities and Colleges
+            Admissions Service).
+          </li>
+          <li>Physical campus tours and open days for prospective students.</li>
+          <li>
+            Student accommodations filled to capacity with shared living spaces.
+          </li>
+        </ul>
+
+        <ul class="list_2">
+          <h1>During COVID-19</h1>
+          <li>
+            Universities shifted to online learning in response to lockdowns and
+            social distancing measures
+          </li>
+          <li>
+            Remote lectures, seminars, and assessments conducted via virtual
+            platforms
+          </li>
+          <li>
+            Limited campus access with strict health and safety protocols for
+            essential activities.
+          </li>
+          <li>
+            Some students had challenges with internet connectivity and access
+            to technology.
+          </li>
+        </ul>
+
+        <ul class="list_3">
+          <h1>After COVID-19</h1>
+          <li>
+            Gradual return to in-person teaching while maintaining elements of
+            online learning.
+          </li>
+          <li>
+            Schools introduced hybrid learning models to accommodate different
+            learning preferences.
+          </li>
+          <li>
+            University management continued emphasising health and safety
+            measures on campus.
+          </li>
+          <li>
+            Enhanced digital infrastructure and support for remote learning
+            technologies.
+          </li>
+        </ul>
+      </section>
+
+      <section id="pkTimelineHeader">
+        <h1 class="topic">Timeline of University Attendance in Pakistan</h1>
+      </section>
+
+      <section id="pkTimelineSection">
+        <ul class="list_1">
+          <h1>Before COVID-19 (pre-2020):</h1>
+          <li>
+            The academic year typically follows a traditional semester system.
+          </li>
+          <li>In-person lectures, labs, and exams conducted on campus.</li>
+          <li>
+            The admission process involves the submission of physical documents
+            and in-person interviews.
+          </li>
+          <li>
+            Limited availability of online learning resources and digital
+            infrastructure.
+          </li>
+        </ul>
+
+        <ul class="list_2">
+          <h1>During COVID-19</h1>
+          <li>
+            Universities transitioned to online learning platforms to continue
+            education.
+          </li>
+          <li>
+            Challenges with internet connectivity and access to technology,
+            particularly in rural areas.
+          </li>
+          <li>
+            Delayed academic calendars and postponed examinations due to
+            lockdowns.
+          </li>
+          <li>
+            Schools adopted remote teaching methods, including video lectures
+            and virtual labs
+          </li>
+        </ul>
+
+        <ul class="list_3">
+          <h1>After COVID-19</h1>
+          <li>
+            Integration of hybrid learning models combining online and in-person
+            instruction.
+          </li>
+          <li>
+            Improved digital infrastructure and accessibility to online
+            resources.
+          </li>
+          <li>
+            Continued emphasis on flexible learning options to accommodate
+            diverse student needs.
+          </li>
+          <li>
+            Streamlined admission processes with increased use of online
+            platforms.
+          </li>
+        </ul>
+      </section>
+
+      <section id="comparisonHeader">
+        <h1 class="topic">Comparison</h1>
+      </section>
+
+      <section id="comparisonSection">
+        <ul class="list_1">
+          <h1>UK Impact</h1>
+          <li>
+            Swift transitioned to online learning in 2020, followed by a
+            cautious return to in-person classes in 2021.
+          </li>
+          <li>
+            Hybrid teaching models were introduced in 2022 to balance in-person
+            and online education.
+          </li>
+          <li>
+            Vaccine rollout enabled the full reopening of universities by 2023,
+            focusing on student well-being and academic support.
+          </li>
+          <li>
+            Vaccine passports and testing requirements facilitated safe campus
+            activities and accommodation access by 2024.
+          </li>
+        </ul>
+
+        <ul class="list_2">
+          <h1>Pakistan Impact</h1>
+          <li>
+            Digital infrastructure challenges hindered a similar shift to online
+            learning in 2020.
+          </li>
+          <li>
+            Slow vaccination progress prolonged reliance on remote education
+            through 2021 and 2022.
+          </li>
+          <li>
+            In-person classes will gradually resume by 2023 and be supported by
+            improved vaccine distribution efforts.
+          </li>
+          <li>
+            Full reopening of universities in 2024, emphasising blended learning
+            and addressing learning disparities.
+          </li>
+        </ul>
+      </section>
+
+      <section id="visualisationHeader">
+        <h1 class="topic">Visualisation</h1>
+      </section>
+
+      <section id="visualisationSection">
+        <div class="charts">
+          <h1>Covid-19 Stringency Index</h1>
+          <p>
+            The stringency index is a composite measure based on nine response
+            indicators including school closures, workplace closures,
+          </p>
+          <p>
+            and travel bans, rescaled to a value from 0 to 100 (100 =
+            strictest).
+          </p>
+
+          <div class="indicators">
+            <div class="flex gappedText">
+              <div class="redBox"></div>
+              <p class="indicator">Non-Vaccinated</p>
+            </div>
+
+            <div class="flex gappedText">
+              <div class="greenBox"></div>
+              <p class="indicator">Vaccinated</p>
+            </div>
+
+            <div class="flex gappedText">
+              <div class="blueBox"></div>
+              <p class="indicator">
+                Weighted average of vaccinated and non-vaccinated
+              </p>
+            </div>
+          </div>
+
+          <h1 class="countryIndex">United Kingdom</h1>
+          <div id="uk-chart" class="chart"></div>
+          <h1 class="countryIndex">Pakistan</h1>
+          <div id="pakistan-chart" class="chart"></div>
+          <p class="centeredText">(Data source: Our World in Data 2024)</p>
+        </div>
+      </section>
+
+      <section id="referenceHeader">
+        <h1 class="topic">Reference</h1>
+      </section>
+
+      <section id="referenceSection">
+        <h1>References List</h1>
+        <ul>
+          <li>
+            Haugom, E., 2022. The effect of changing from campus-based to
+            digital teaching on student attendance: A case study of Norwegian
+            business students. Heliyon, 8(11).
+            <a href="https://doi.org/10.1016%2Fj.heliyon.2022.e11307"
+              >https://doi.org/10.1016%2Fj.heliyon.2022.e11307</a
+            >.
+          </li>
+          <li>
+            Korotchenko, S. and Dobbs, R., 2023. The effect of the COVID-19
+            pandemic on college enrolment: How has enrolment in criminal justice
+            programs been affected by the pandemic in comparison to other
+            college programs? Frontiers in Education, 8. 1136040.
+          </li>
+          <li>
+            Our World in Data. (2024). United Kingdom: Coronavirus pandemic
+            country profile. Our World in Data.
+            <a
+              href="https://ourworldindata.org/coronavirus/country/united-kingdom?country=GBR~PAK#citation"
+              >https://ourworldindata.org/coronavirus/country/united-kingdom?country=GBR~PAK#citation</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>&copy; 2024 COVID-19 Effects on University Attendance</footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
