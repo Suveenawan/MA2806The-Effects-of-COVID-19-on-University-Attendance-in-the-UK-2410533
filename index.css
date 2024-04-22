@@ -115,31 +115,46 @@ section > h1 {
   background-position-y: center;
 }
 
-#ukTimelineSection > .list_1 {
+#ukTimelineSection > .before_covid {
   position: absolute;
   right: 5%;
   top: 5%;
+  width: 50%;
   font-size: 1.5rem;
   list-style-type: none;
   list-style: disc;
 }
 
-#ukTimelineSection > .list_2 {
+#ukTimelineSection > .before_covid > p {
+  font-size: 1.2rem;
+}
+
+#ukTimelineSection > .during_covid {
   position: absolute;
-  top: 50%;
+  top: 47.5%;
   left: 10%;
+  width: 50%;
   font-size: 1.5rem;
   list-style-type: none;
   list-style: disc;
 }
 
-#ukTimelineSection > .list_3 {
+#ukTimelineSection > .during_covid > p {
+  font-size: 1.2rem;
+}
+
+#ukTimelineSection > .after_covid {
   position: absolute;
   right: 5%;
   top: 85%;
+  width: 85%;
   font-size: 1.5rem;
   list-style-type: none;
   list-style: disc;
+}
+
+#ukTimelineSection > .after_covid > p {
+  font-size: 1.2rem;
 }
 
 #pkTimelineSection {
@@ -155,31 +170,46 @@ section > h1 {
   background-position-y: center;
 }
 
-#pkTimelineSection > .list_1 {
+#pkTimelineSection > .before_covid {
   position: absolute;
   left: 35%;
+  width: 50%;
   top: 5%;
   font-size: 1.5rem;
   list-style-type: none;
   list-style: disc;
 }
 
-#pkTimelineSection > .list_2 {
+#pkTimelineSection > .before_covid > p {
+  font-size: 1.2rem;
+}
+
+#pkTimelineSection > .during_covid {
   position: absolute;
   top: 22%;
   left: 10%;
+  font-size: 1.5rem;
+  width: 50%;
+  list-style-type: none;
+  list-style: disc;
+}
+
+#pkTimelineSection > .during_covid > p {
+  font-size: 1.2rem;
+}
+
+#pkTimelineSection > .after_covid {
+  position: absolute;
+  left: 5%;
+  top: 85%;
+  width: 50%;
   font-size: 1.5rem;
   list-style-type: none;
   list-style: disc;
 }
 
-#pkTimelineSection > .list_3 {
-  position: absolute;
-  left: 5%;
-  top: 85%;
-  font-size: 1.5rem;
-  list-style-type: none;
-  list-style: disc;
+#pkTimelineSection > .after_covid > p {
+  font-size: 1.2rem;
 }
 
 #comparisonSection {
@@ -238,10 +268,15 @@ section > h1 {
 
 .whiteBubble {
   height: fit-content;
+  width: 50%;
   padding: 1rem;
   margin-top: 3rem;
   margin-right: 3rem;
   background-color: #ffffffaa;
+}
+
+#prefaceSection > .whiteBubble > p {
+  font-size: 1.2rem;
 }
 
 .redBox {
@@ -319,7 +354,7 @@ p.indicator {
 
 #referenceSection > ul {
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 #referenceSection > ul > li > a {
